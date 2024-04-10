@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2.97rem;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar .logo span {
+  color: #051f92;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #051f92;
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/225/412/869/star-trek-star-trek-enterprise-enterprise-nx-01-wallpaper-preview.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.hero-section .content button {
+  background: #f7f3f3;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+  color: #000000;
+  background: #585757;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  z-index:-1;
+}
+
+.container {
+  display: flex;
+  position: relative; /* Needed for layering elements */
+  z-index:-1;
+}
+
+.background-image {
+  width: 100%; /* Ensure background image covers the entire container */
+  height: 100%;
+  object-fit: cover; /* Fill the space and maintain aspect ratio */
+  position: absolute; /* Layer behind the content */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Set background image to a lower layer */
+}
+
+.content-wrapper {
+  display: flex; /* Arrange text and image side-by-side */
+  flex: 1; /* Content takes up remaining space after background image */
+  z-index:-1;
+}
+
+.text-content {
+  flex: 2; /* Text takes up 2/3 of the content space */
+  padding: 50px;
+  color: white; /* Adjust text color for contrast */
+  background-color: rgb(0, 0, 0); /* Semi-transparent black background */
+  z-index:0;
+}
+
+.side-image {
+  width: 50%; /* Adjust width for the smaller image */
+  object-fit: cover;
+  z-index:0;
+}
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-image: url("black.jpg"); /* Replace with your image path */
+  background-size: cover; /* Stretch image to cover the entire background */
+  background-position: center; /* Center the image */
+  font-family: Arial, sans-serif; /* Set a basic font */
+}
+
+.left-column,
+.right-column {
+  width: 90%; /* Set column width (adjust as needed) */
+  color: white; /* Set text color to white for readability on black background */
+  text-align: center;
+}
+
+.left-column h2,
+.right-column h2 {
+  margin-bottom: 0px; /* Add some space below headings */
+  
+}
+.smalllogo{
+  width: 43px;  height: 43px; 
+  margin-left: 15px;
+}
+
+.science{
+  width: 330px;
+  height: 500px;
+  margin: 0 auto;
+}
+.engineering{
+  width: 330px;
+  height: 500px;
+  margin: 0 auto;
+}
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns, each 1 fraction of container width */
+  gap: 10px; /* Optional gap between columns */
+}
+
+.column img {
+  width: 330px; /* Set image width */
+  height: 500px; /* Set image height */
+}
